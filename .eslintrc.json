@@ -1,0 +1,25 @@
+{
+  "extends": ["next/core-web-vitals", "./node_modules/standard/eslintrc.json"],
+  "rules": {
+    "multiline-ternary": 0,
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always"
+      }
+    ],
+    "react/self-closing-comp": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "noSortAlphabetically": false,
+        "reservedFirst": true
+      }
+    ],
+    "space-before-function-paren": 0,
+    "comma-dangle": ["error", "never"]
+  }
+}

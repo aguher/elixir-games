@@ -1,27 +1,36 @@
-import '@mantine/core/styles.css';
-import React from 'react';
-import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-import { theme } from '../theme';
+import '@mantine/core/styles.css'
+import React from 'react'
+import { MantineProvider, ColorSchemeScript, Container } from '@mantine/core'
+
+import { theme } from '../theme'
+
+import { QueryProvider } from '@/contexts/queryContext'
 
 export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
-};
+  title: 'Agus Herrera - Challenge',
+  description: 'Frontend challenge!'
+}
 
 export default function RootLayout({ children }: { children: any }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <head>
         <ColorSchemeScript />
-        <link rel="shortcut icon" href="/favicon.svg" />
+        <link href='/favicon.svg' rel='shortcut icon' />
         <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
+          content='minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no'
+          name='viewport'
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider theme={theme}>
+          <QueryProvider>
+            <Container>
+              {children}
+            </Container>
+          </QueryProvider>
+        </MantineProvider>
       </body>
     </html>
-  );
+  )
 }

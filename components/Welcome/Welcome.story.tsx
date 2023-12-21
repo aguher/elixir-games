@@ -1,7 +1,8 @@
-import { Welcome } from './Welcome';
+/* eslint-disable import/no-anonymous-default-export */
+import { Welcome } from './Welcome'
 
 export default {
-  title: 'Welcome',
-};
+  title: 'Welcome'
+}
 
-export const Usage = () => <Welcome />;
+export const Usage = () => <Welcome />
