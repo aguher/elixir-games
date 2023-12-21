@@ -18,7 +18,6 @@ export const EmptyState = ({ onRefresh }:Props) => {
 
         <Group justify='space-between' mb='xs' mt='md'>
           <Text fw={500}>There is no results!</Text>
-
         </Group>
 
         <Text c='dimmed' size='sm'>

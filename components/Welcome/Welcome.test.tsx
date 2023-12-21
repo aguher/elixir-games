@@ -4,11 +4,8 @@ import { Welcome } from './Welcome'
 import { render, screen } from '@/test-utils'
 
 describe('Welcome component', () => {
-  it('has correct Next.js theming section link', () => {
+  it('has correct title', () => {
     render(<Welcome />)
-    expect(screen.getByText('this guide')).toHaveAttribute(
-      'href',
-      'https://mantine.dev/guides/next/'
-    )
+    expect(screen.getByText('Welcome to')).toBeInTheDocument()
   })
 })

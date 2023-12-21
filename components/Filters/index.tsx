@@ -27,6 +27,7 @@ export const Filters = ({ onChangeNationalities, onChangeName, selectedNationali
           hidePickedOptions
           searchable
           data={nationalities}
+          data-testid='selector'
           defaultValue={selectedNationalities}
           description='You can select more than one'
           disabled={loading}

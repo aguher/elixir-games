@@ -1,15 +1,12 @@
-# Mantine Next.js template
+# Agustin Herrera - Challenge
 
-This is a template for [Next.js](https://nextjs.org/) app router + [Mantine](https://mantine.dev/).
-If you want to use pages router instead, see [next-pages-template](https://github.com/mantinedev/next-pages-template).
 
 ## Features
 
-This template comes with the following features:
+This project comes with the following features:
 
 - [PostCSS](https://postcss.org/) with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Storybook](https://storybook.js.org/)
 - [Jest](https://jestjs.io/) setup with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 - ESLint setup with [eslint-config-mantine](https://github.com/mantinedev/eslint-config-mantine)
 
@@ -30,8 +27,8 @@ This template comes with the following features:
 - `jest:watch` – starts jest watch
 - `test` – runs `jest`, `prettier:check`, `lint` and `typecheck` scripts
 
-### Other scripts
+## Architecture
 
-- `storybook` – starts storybook dev server
-- `storybook:build` – build production storybook bundle to `storybook-static`
-- `prettier:write` – formats all files with Prettier
+I have used a hexagonal style architecture. Where I have divided the functional components in the `components` folder, the common `hooks` in its folder, and in the `core` folder, I have added the related to the API calls.
+
+I have used the mantine component library, but I have not used anything related to state management, because I have not found it necessary.

@@ -24,7 +24,7 @@ export const TableUsers = ({ loading, elements, onSelectUser }:Props) => {
   ))
 
   return (
-    loading ? <Flex justify='center' m='xl'><Loader /></Flex> : (
+    loading ? <Flex justify='center' m='xl'><Loader data-testid='loader' /></Flex> : (
       <Table.ScrollContainer className={classes.table} h='50vh' minWidth={500}>
         <Table highlightOnHover stickyHeader striped>
           <Table.Thead>
